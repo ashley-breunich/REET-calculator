@@ -5,7 +5,7 @@ const Form = props => {
         <form>
             <p>How much is your home worth?</p>
             <input onChange={props.handleInput}/>
-            <button>Submit</button>
+            <button onClick={props.handleSubmit}>Submit</button>
         </form>
     )
 }
