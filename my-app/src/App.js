@@ -20,19 +20,19 @@ class App extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    let homePrice = parseFloat(this.state.homePrice.replace(/,/g, ''));
-    this.setState({ oldReet: homePrice * .0178 });
-    if(homePrice < 500000) {
-      this.setState({ newReet: homePrice * .0160 });
+    let trimmedPrice = parseFloat(this.state.homePrice.replace(/,/g, ''));
+    this.setState({ oldReet: trimmedPrice * .0178 });
+    if(trimmedPrice < 500000) {
+      this.setState({ newReet: trimmedPrice * .0160 });
     }
-    if(homePrice >= 500000 && homePrice <= 1500000 ) {
-      this.setState({ newReet: homePrice * .0178 });
+    if(trimmedPrice >= 500000 && trimmedPrice <= 1500000 ) {
+      this.setState({ newReet: trimmedPrice * .0178 });
     }
-    if(homePrice > 1500000 && homePrice <= 3000000 ) {
-      this.setState({ newReet: homePrice * .0325 });
+    if(trimmedPrice > 1500000 && trimmedPrice <= 3000000 ) {
+      this.setState({ newReet: trimmedPrice * .0325 });
     }
-    if(homePrice > 3000000 ) {
-      this.setState({ newReet: homePrice * .035 });
+    if(trimmedPrice > 3000000 ) {
+      this.setState({ newReet: trimmedPrice * .035 });
     }
   }
 
