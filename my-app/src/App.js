@@ -20,7 +20,7 @@ class App extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    let homePrice = parseInt(this.state.homePrice);
+    let homePrice = parseFloat(this.state.homePrice.replace(/,/g, ''));
     this.setState({ oldReet: homePrice * .0178 });
     if(homePrice < 500000) {
       this.setState({ newReet: homePrice * .0160 });
