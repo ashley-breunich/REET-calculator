@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/header/header.js';
 import Form from './components/form/form.js';
 import ReetRender from './components/reet/reetrender.js';
+import If from './components/if/if.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -42,7 +43,9 @@ class App extends React.Component {
       <React.Fragment>
         <Header />
         <Form handleInput={this.handleInput} handleSubmit={this.handleSubmit}/>
-        <ReetRender oldReet={this.state.oldReet} newReet={this.state.newReet}/>
+        <If condition={this.state.newReet}>
+          <ReetRender oldReet={this.state.oldReet} newReet={this.state.newReet}/>
+        </If>
       </React.Fragment>
     )
   }
