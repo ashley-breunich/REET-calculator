@@ -16,7 +16,6 @@ const Reet = props => {
                 </div>
             </div>
         </div>
-        
         </React.Fragment>
     )
 }
