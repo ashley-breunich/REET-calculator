@@ -47,7 +47,7 @@ class App extends React.Component {
         <Header />
         <Form handleInput={this.handleInput} handleSubmit={this.handleSubmit}/>
         <If condition={this.state.newReet}>
-          <ReetRender oldReet={this.state.oldReet} newReet={this.state.newReet}/>
+          <ReetRender homePrice={this.state.homePrice} oldReet={this.state.oldReet} newReet={this.state.newReet}/>
         </If>
       </React.Fragment>
     )
