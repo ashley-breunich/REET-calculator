@@ -4,7 +4,7 @@
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
   background-color: #fafafa;
-  color: #3a3a3a;
+  color: #3f3f3f;
 }
 
 .App-header {
@@ -87,10 +87,12 @@ button:focus {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
+  color: #0d223f;
 }
 
 .column-one p {
-  font-size: 1.2em;
+  font-size: 1.4em;
+  margin-top: -.3em;
   margin-bottom: 1.5em;
 }
 
@@ -102,10 +104,12 @@ button:focus {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
+  color: #0d223f;
 }
 
 .column-two p {
-  font-size: 1.2em;
+  font-size: 1.4em;
+  margin-top: -.3em;
   margin-bottom: 1.5em;
 }
 
