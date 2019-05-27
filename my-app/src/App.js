@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/header/header.js';
 import Form from './components/form/form.js';
 import ReetRender from './components/reet/reetrender.js';
+import Footer from './components/footer/footer.js';
 import If from './components/if/if.js'
 
 class App extends React.Component {
@@ -49,6 +50,7 @@ class App extends React.Component {
         <If condition={this.state.newReet}>
           <ReetRender homePrice={this.state.homePrice} oldReet={this.state.oldReet} newReet={this.state.newReet}/>
         </If>
+        <Footer />
       </React.Fragment>
     )
   }
