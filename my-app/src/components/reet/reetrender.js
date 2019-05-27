@@ -8,11 +8,11 @@ const Reet = props => {
             <div className="results">
                 <div className="column-one">
                     <h3>2019 REET Cost</h3>
-                    <p>${props.oldReet}</p>
+                    <p>${Math.round(props.oldReet)}</p>
                 </div>
                 <div className="column-two">
                     <h3>2020 REET Cost</h3>
-                    <p>${props.newReet}</p>
+                    <p>${Math.round(props.newReet)}</p>
                 </div>
             </div>
         </div>

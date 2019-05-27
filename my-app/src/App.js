@@ -5,6 +5,7 @@ import Form from './components/form/form.js';
 import ReetRender from './components/reet/reetrender.js';
 import Footer from './components/footer/footer.js';
 import If from './components/if/if.js'
+// import { Transition } from 'react-transition-group';
 
 class App extends React.Component {
   constructor(props) {
