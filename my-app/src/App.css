@@ -4,8 +4,8 @@
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
-  background-color: #282c34;
-  color: #fafafa;
+  background-color: #fafafa;
+  color: #3a3a3a;
 }
 
 .App-header {
@@ -13,12 +13,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(12px + 2vmin);
+  font-size: calc(7px + 2vmin);
   color: #fafafa;
-  letter-spacing: .1em;
-  height: 2em;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  letter-spacing: .02em;
+  /* margin-top: 2em; */
+  margin-bottom: .5em;
+}
+
+img {
+  width: 150px;
 }
 
 .form h2 {
@@ -38,7 +41,7 @@
 
 input {
   padding: 5px; 
-  border: 2px solid #fafafa; 
+  border: 1px solid #3a3a3a;; 
   margin-right: .4em;
   border-radius: .8em;
   font-size: 1.3em;
@@ -46,9 +49,51 @@ input {
 
 button {
   padding: 7px 20px 7px 20px; 
-  background:#fafafa;
-  color: #282c34;
+  background:#0d223f;
+  color: #fafafa;
   border-radius: .8em;
   font-size: 1.3em;
+}
+
+.description {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+.results {
+  width: 322px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column-one {
+  float: left;
+  margin-right: 3em;
+}
+
+.column-one h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.column-one p {
+  font-size: 1.2em;;
+}
+
+.column-two {
+  float: left;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.column-two h3 {
+  font-weight: 600;
+}
+
+.column-two p {
+  font-size: 1.2em;;
 }
 
