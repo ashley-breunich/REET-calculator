@@ -16,8 +16,6 @@
   font-size: calc(7px + 2vmin);
   color: #fafafa;
   letter-spacing: .02em;
-  /* margin-top: 2em; */
-  margin-bottom: .5em;
 }
 
 img {
@@ -47,6 +45,10 @@ input {
   font-size: 1.3em;
 }
 
+input:focus {
+  outline-width: 0;
+}
+
 button {
   padding: 7px 20px 7px 20px; 
   background:#0d223f;
@@ -55,15 +57,23 @@ button {
   font-size: 1.3em;
 }
 
+button:hover {
+  background:#91a3bd;
+}
+
+button:focus {
+  outline-width: 0;
+}
+
 .description {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 
 .results {
-  width: 322px;
+  width: 326px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -85,15 +95,20 @@ button {
 
 .column-two {
   float: left;
-  text-transform: uppercase;
-  letter-spacing: .1em;
 }
 
 .column-two h3 {
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
 }
 
 .column-two p {
   font-size: 1.2em;;
 }
 
+h4 {
+  font-size: .8em;
+  margin-top: 3em;
+  display: block;
+}
