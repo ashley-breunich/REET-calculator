@@ -28,15 +28,12 @@ class App extends React.Component {
     if(trimmedPrice <= 500000) {
       this.setState({ newReet: trimmedPrice * .0160 });
     }
-    // Anything up to $500,000 will be taxed at 1.6%; anthing from $500,001 --> $1.5M will be taxed at 1.78%
     if(trimmedPrice > 500000 && trimmedPrice <= 1500000 ) {
       this.setState({ newReet: 8000 + ((trimmedPrice-500000) * .0178) });
     }
-    // Anything up to $500,000 will be taxed at 1.6%; anthing from $500,001 --> $1.5M will be taxed at 1.78%; anything from $1,500,001 --> 3M will be taxed at 3.25%
     if(trimmedPrice > 1500000 && trimmedPrice <= 3000000 ) {
       this.setState({ newReet: 25800 + ((trimmedPrice-1500000) * .0325) });
     }
-     // Anything up to $500,000 will be taxed at 1.6%; anthing from $500,001 --> $1.5M will be taxed at 1.78%; anything from $1,500,001 --> 3M will be taxed at 3.25%; anything above 3,000,001 will be taxed at 3.5%
     if(trimmedPrice > 3000000 ) {
       this.setState({ newReet: 74550 + ((trimmedPrice-3000000) * .035) });
     }

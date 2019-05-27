@@ -28,7 +28,7 @@ img {
 }
 
 .form p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-align: center;
   line-height: 1.55em;
   width: 70%;
@@ -120,4 +120,14 @@ h4 {
   margin-left: auto;
   margin-right: auto;
   clear:both;
+}
+
+@media only screen and (max-width: 1000px) {
+  .description {
+    width: 80%;
+  }
+
+  .form p {
+    width: 80%;
+  }
 }
