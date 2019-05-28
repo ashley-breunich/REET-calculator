@@ -3,7 +3,7 @@ import React from 'react';
 const Reet = props => {
     return (
         <React.Fragment>
-        <div className="reet-render">
+        <div className="reetRender">
             <h2 className="description">Based on your inputted home price of ${props.homePrice.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}, a comparison of your 2019 and 2020 real estate excise taxes are below.</h2>
             <div className="results">
                 <div className="column-one">
