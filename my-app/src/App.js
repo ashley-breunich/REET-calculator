@@ -11,9 +11,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-       homePrice: '',
-       oldReet: '',
-       newReet: '',
+       homePrice: 0,
+       oldReet: 0,
+       newReet: 0,
+       currentTrimmedPrice: 0,
     }
   }
 
@@ -24,7 +25,10 @@ class App extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     let trimmedPrice = parseFloat(this.state.homePrice.replace(/,/g, ''));
-    this.setState({ oldReet: trimmedPrice * .0178 });
+    this.setState({ 
+      oldReet: trimmedPrice * .0178, 
+      currentTrimmedPrice: trimmedPrice
+    });
     if(trimmedPrice <= 500000) {
       this.setState({ newReet: trimmedPrice * .0160 });
     }
@@ -39,13 +43,19 @@ class App extends React.Component {
     }
   }
 
+  onDelete = event => {
+    if (event.keyCode === 8) {
+      this.setState({ currentTrimmedPrice: 0 })
+    }
+  }
+
   render() {
     console.log(this.state);
     return (
       <React.Fragment>
         <Header />
-        <Form handleInput={this.handleInput} handleSubmit={this.handleSubmit}/>
-        <If condition={this.state.newReet}>
+        <Form handleInput={this.handleInput} handleSubmit={this.handleSubmit} onDelete={this.onDelete}/>
+        <If condition={this.state.currentTrimmedPrice}>
           <ReetRender homePrice={this.state.homePrice} oldReet={this.state.oldReet} newReet={this.state.newReet}/>
         </If>
         <Footer />
