@@ -20,6 +20,9 @@ class App extends React.Component {
 
   handleInput = event => {
     this.setState({ homePrice: event.target.value });
+    if (this.state.currentTrimmedPrice !== this.state.homePrice) {
+      this.setState({ currentTrimmedPrice: 0 })
+    }
   }
 
   handleSubmit = event => {
@@ -43,18 +46,12 @@ class App extends React.Component {
     }
   }
 
-  onDelete = event => {
-    if (event.keyCode === 8) {
-      this.setState({ currentTrimmedPrice: 0 })
-    }
-  }
-
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <React.Fragment>
         <Header />
-        <Form handleInput={this.handleInput} handleSubmit={this.handleSubmit} onDelete={this.onDelete}/>
+        <Form handleInput={this.handleInput} handleSubmit={this.handleSubmit}/>
         <If condition={this.state.currentTrimmedPrice}>
           <ReetRender homePrice={this.state.homePrice} oldReet={this.state.oldReet} newReet={this.state.newReet}/>
         </If>
