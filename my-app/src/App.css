@@ -163,6 +163,11 @@ footer {
     font-size: 1em;
   }
 
+  footer {
+    padding-top: -5em;
+    padding-bottom: 2em;
+  }
+
   h4 {
     font-size: .5em;
   }
