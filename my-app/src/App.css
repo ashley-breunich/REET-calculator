@@ -131,3 +131,21 @@ h4 {
     width: 80%;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .column-one {
+    float: none;
+    margin-right: 0em;
+  }
+
+  .column-two {
+    float: none;
+  }
+
+  .description {
+    font-size: .9em;
+  }
+  h4 {
+    font-size: .5em;
+  }
+}
