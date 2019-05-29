@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-       homePrice: 0,
+       homePrice: '',
        oldReet: 0,
        newReet: 0,
        currentTrimmedPrice: 0,
@@ -51,7 +51,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <Form handleInput={this.handleInput} handleSubmit={this.handleSubmit}/>
+        <Form handleInput={this.handleInput} handleSubmit={this.handleSubmit} homePrice={this.state.homePrice} />
         <If condition={this.state.currentTrimmedPrice}>
           <ReetRender homePrice={this.state.homePrice} oldReet={this.state.oldReet} newReet={this.state.newReet}/>
         </If>
