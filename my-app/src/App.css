@@ -124,6 +124,7 @@ button:focus {
 footer h3 {
   line-height: 1.2em;
   font-size: 1.1em;
+  font-weight: 600;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
