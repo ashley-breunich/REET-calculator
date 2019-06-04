@@ -5,7 +5,13 @@ import Form from './components/form/form.js';
 import ReetRender from './components/reet/reetrender.js';
 import Footer from './components/footer/footer.js';
 import If from './components/if/if.js'
-// import { Transition } from 'react-transition-group';
+import ReactGA from 'react-ga';
+
+function initializeReactGA() {
+  ReactGA.initialize('UA-141501134-1');
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
+initializeReactGA();
 
 class App extends React.Component {
   constructor(props) {
